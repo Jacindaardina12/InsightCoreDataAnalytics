@@ -1,0 +1,163 @@
+/* ============================================================
+   IL VASTO InsightBot — Elegant Light Theme
+   Typography: DM Serif Display + DM Sans
+   Aesthetic: Clean editorial — warm white, ink black, amber accent
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, [class*="css"] {
+    font-family: 'DM Sans', sans-serif !important;
+    background-color: #FAFAF8 !important;
+    color: #1A1A18 !important;
+}
+
+/* ── HIDE DEFAULT STREAMLIT ── */
+#MainMenu, footer, .stDeployButton { display: none !important; }
+header[data-testid="stHeader"] { display: none !important; }
+
+/* ── LAYOUT ── */
+.block-container {
+    max-width: 760px !important;
+    padding: 0 24px 120px !important;
+    margin: 0 auto !important;
+}
+
+/* ── SIDEBAR ── */
+[data-testid="stSidebar"] {
+    background: #F5F4F0 !important;
+    border-right: 1px solid #E8E6E0 !important;
+}
+[data-testid="stSidebar"] * {
+    font-family: 'DM Sans', sans-serif !important;
+    color: #5A5A55 !important;
+    font-size: 13px !important;
+}
+
+/* ── BUTTONS ── */
+.stButton > button {
+    width: 100% !important;
+    background: #FFFFFF !important;
+    color: #1A1A18 !important;
+    border: 1px solid #E2E0D8 !important;
+    border-radius: 10px !important;
+    padding: 14px 18px !important;
+    text-align: left !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 400 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important;
+    transition: all 0.18s ease !important;
+    cursor: pointer !important;
+}
+.stButton > button:hover {
+    border-color: #C8A96E !important;
+    background: #FFFDF5 !important;
+    box-shadow: 0 2px 8px rgba(200,169,110,0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ── CHAT INPUT ── */
+.stChatInput {
+    background: #FFFFFF !important;
+    border: 1px solid #E2E0D8 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+}
+.stChatInput textarea {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 14px !important;
+    color: #1A1A18 !important;
+    background: transparent !important;
+}
+[data-testid="stChatInputSubmitButton"] svg {
+    color: #C8A96E !important;
+}
+
+/* ── EXPANDER ── */
+[data-testid="stExpander"] {
+    background: #FFFFFF !important;
+    border: 1px solid #E8E6E0 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+[data-testid="stExpander"] summary {
+    font-family: 'DM Mono', monospace !important;
+    font-size: 11px !important;
+    color: #9A9890 !important;
+    letter-spacing: 0.02em !important;
+}
+
+/* ── DATAFRAME ── */
+.stDataFrame {
+    border: 1px solid #E8E6E0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+.stDataFrame th {
+    background: #F5F4F0 !important;
+    color: #5A5A55 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    font-family: 'DM Mono', monospace !important;
+}
+.stDataFrame td {
+    font-size: 13px !important;
+    color: #1A1A18 !important;
+}
+
+/* ── TABS ── */
+.stTabs [data-baseweb="tab-list"] {
+    background: transparent !important;
+    border-bottom: 1px solid #E8E6E0 !important;
+    gap: 0 !important;
+}
+.stTabs [data-baseweb="tab"] {
+    background: transparent !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 12px !important;
+    color: #9A9890 !important;
+    padding: 8px 16px !important;
+    border-bottom: 2px solid transparent !important;
+    font-weight: 500 !important;
+}
+.stTabs [aria-selected="true"] {
+    color: #1A1A18 !important;
+    border-bottom-color: #C8A96E !important;
+    background: transparent !important;
+}
+
+/* ── SPINNER ── */
+.stSpinner > div {
+    border-top-color: #C8A96E !important;
+}
+
+/* ── PLOTLY CHARTS ── */
+.js-plotly-plot .plotly .svg-container {
+    background: transparent !important;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #E2E0D8; border-radius: 2px; }
+
+/* ── ALERT / INFO ── */
+.stAlert {
+    border-radius: 8px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+}
+
+/* Membuat konten tetap center (tengah) tapi jangkauannya lebih lebar */
+.stMainBlockContainer {
+    max-width: 1000px !important;  /* Standar Streamlit centered itu ~730px. Kita lebarkan ke 1000px */
+    margin: 0 auto !important;     /* Memastikan posisi kotak tetap presisi di tengah layar */
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
